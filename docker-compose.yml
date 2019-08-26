@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  tg2notion:
+    container_name: tg2notion
+    build: .
+    restart: unless-stopped
+    volumes:
+      - ./src:/src
+    env_file: ./tg2n.env
